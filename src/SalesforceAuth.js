@@ -23,6 +23,8 @@ export const loginWithSalesforce = async () => {
   const codeChallenge = await generateCodeChallenge(codeVerifier);
   sessionStorage.setItem('code_verifier', codeVerifier);
 
+  console.log('REDIRECT_URI:', REDIRECT_URI);
+
   const authUrl = `${SF_LOGIN_URL}/services/oauth2/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&code_challenge=${codeChallenge}&code_challenge_method=S256`;
   window.location.href = authUrl;
 };
