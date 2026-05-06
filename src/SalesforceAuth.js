@@ -22,16 +22,14 @@ export const loginWithSalesforce = async () => {
   const codeVerifier = generateCodeVerifier();
   const codeChallenge = await generateCodeChallenge(codeVerifier);
   sessionStorage.setItem('code_verifier', codeVerifier);
-
   console.log('REDIRECT_URI:', REDIRECT_URI);
-
   const authUrl = `${SF_LOGIN_URL}/services/oauth2/authorize?response_type=code&client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&code_challenge=${codeChallenge}&code_challenge_method=S256`;
   window.location.href = authUrl;
 };
 
 export const getTokenFromCode = async (code) => {
   const codeVerifier = sessionStorage.getItem('code_verifier');
-
+  console.log('Calling Render server...');
   const response = await fetch('https://sf-validation-server.onrender.com/oauth/token', {
     method: 'POST',
     headers: {
@@ -42,7 +40,6 @@ export const getTokenFromCode = async (code) => {
       code_verifier: codeVerifier,
     }),
   });
-
   const data = await response.json();
   return data;
 };
