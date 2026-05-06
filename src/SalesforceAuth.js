@@ -30,7 +30,7 @@ export const loginWithSalesforce = async () => {
 export const getTokenFromCode = async (code) => {
   const codeVerifier = sessionStorage.getItem('code_verifier');
 
-  const response = await fetch('http://localhost:5000/oauth/token', {
+  const response = await fetch('https://dashboard.render.com/web/srv-d7th92q8qa3s73c4f3ug/deploys/dep-d7th9328qa3s73c4f4p0?r=2026-05-06%4010%3A13%3A36%7E2026-05-06%4010%3A18%3A07', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
