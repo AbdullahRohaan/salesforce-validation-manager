@@ -1,0 +1,94 @@
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #0070d2;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.message {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f4f6f9;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.login-btn {
+  background-color: #0070d2;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  display: block;
+  margin: 50px auto;
+}
+
+.activate-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.deactivate-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.rules-table th {
+  background-color: #0070d2;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.rules-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.rules-table tr:hover {
+  background-color: #f4f6f9;
+}
+
+.active {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.inactive {
+  color: #f44336;
+  font-weight: bold;
+}
