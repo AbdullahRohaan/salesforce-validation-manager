@@ -30,7 +30,7 @@ export const loginWithSalesforce = async () => {
 export const getTokenFromCode = async (code) => {
   const codeVerifier = sessionStorage.getItem('code_verifier');
 
-  const response = await fetch('https://sf-validation-server.onrender.com', {
+  const response = await fetch('https://sf-validation-server.onrender.com/oauth/token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
