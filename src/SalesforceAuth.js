@@ -1,6 +1,6 @@
 const SF_LOGIN_URL = process.env.REACT_APP_SF_LOGIN_URL;
 const CLIENT_ID = process.env.REACT_APP_SF_CLIENT_ID;
-const REDIRECT_URI = 'https://salesforce-validation-manager-mtun5eu8n.vercel.app/oauth/callback';
+const REDIRECT_URI = 'https://salesforce-validation-manager.vercel.app/oauth/callback';
 
 const generateCodeVerifier = () => {
   const array = new Uint32Array(56);
